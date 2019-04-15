@@ -7,25 +7,25 @@
 <title>Vowel</title> 
 </head> 
 <body> 
-<input id="input" placeholder="Введите строку" type="text"> 
-<button id="searchButton">Поиск</button> 
-<div> 
-<h3>Количество гласных: <span id="output"></span></h3> 
-</div> 
+  <input id="input" placeholder="Р’РІРµРґРёС‚Рµ СЃС‚СЂРѕРєСѓ" type="text"> 
+  <button id="searchButton">РџРѕРёСЃРє</button> 
+  <div> 
+    <h3>РљРѕР»РёС‡РµСЃС‚РІРѕ РіР»Р°СЃРЅС‹С…: <span id="output"></span></h3> 
+  </div> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
 <script> 
-const stringsearch = ["а", "о", "и", "е", "ё", "э", "ы", "у", "ю", "я"] 
-$("#searchButton").on("click", searching) 
-function searching() { 
-let count = 0 
-const string = $("#input").val().split("") 
-string.forEach(item => { 
-if (stringsearch.includes(item.toLowerCase())) { 
-count++ 
-} 
-}) 
-$("#output").html(count) 
-} 
+  const stringsearch = ["Р°", "Рѕ", "Рё", "Рµ", "С‘", "СЌ", "С‹", "Сѓ", "СЋ", "СЏ"] 
+  $("#searchButton").on("click", searching) 
+  function searching() { 
+    let count = 0 
+    const string = $("#input").val().split("") 
+    string.forEach(item => { 
+    if (stringsearch.includes(item.toLowerCase())) { 
+      count++ 
+    } 
+    }) 
+    $("#output").html(count) 
+  } 
 </script> 
 </body> 
 </html>

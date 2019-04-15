@@ -4,27 +4,27 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
-<title>Vowel</title> 
+<title>SearchCountOfVowel</title> 
 </head> 
 <body> 
 <input id="input" placeholder="Введите текст" type="text"> 
 <button id="searchButton">Поиск</button> 
 <div> 
-<h3>Count of vowels: <span id="output"></span></h3> 
+<h3>Количество гласных: <span id="output"></span></h3> 
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
 <script> 
 const stringsearch = ["а", "о", "и", "е", "ё", "э", "ы", "у", "ю", "я"] 
 $("#searchButton").on("click", searching) 
 function searching() { 
-let count = 0 
-const string = $("#input").val().split("") 
-string.forEach(item => { 
-if (stringsearch.includes(item.toLowerCase())) { 
-count++ 
-} 
-}) 
-$("#output").html(count) 
+	let count = 0 
+	const string = $("#input").val().split("") 
+	string.forEach(item => { 
+		if (stringsearch.includes(item.toLowerCase())) { 
+			count++ 
+		} 
+	}) 
+	$("#output").html(count) 
 } 
 </script> 
 </body> 

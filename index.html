@@ -1,20 +1,20 @@
 <!DOCTYPE html> 
 <html lang="en"> 
 <head> 
-<meta charset="UTF-8"> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
 <title>Vowel</title> 
 </head> 
 <body> 
-<input id="input" placeholder="Введите строку" type="text"> 
-<button id="searchButton">Поиск</button> 
+<input id="input" placeholder="Р’РІРµРґРёС‚Рµ С‚РµРєСЃС‚" type="text"> 
+<button id="searchButton">РџРѕРёСЃРє</button> 
 <div> 
-<h3>Количество гласных: <span id="output"></span></h3> 
+<h3>Count of vowels: <span id="output"></span></h3> 
 </div> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
 <script> 
-const stringsearch = ["а", "о", "и", "е", "ё", "э", "ы", "у", "ю", "я"] 
+const stringsearch = ["Р°", "Рѕ", "Рё", "Рµ", "С‘", "СЌ", "С‹", "Сѓ", "СЋ", "СЏ"] 
 $("#searchButton").on("click", searching) 
 function searching() { 
 let count = 0 

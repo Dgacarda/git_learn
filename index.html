@@ -19,12 +19,16 @@ $("#searchButton").on("click", searching)
 function searching() { 
 	let count = 0 
 	const string = $("#input").val().split("") 
-	string.forEach(item => { 
-		if (stringsearch.includes(item.toLowerCase())) { 
-			count++ 
-		} 
-	}) 
-	$("#output").html(count) 
+	if (string[string.length - 1] === '!') {
+	  string.forEach(item => { 
+		  if (stringsearch.includes(item.toLowerCase())) { 
+			  count++ 
+		  } 
+	  }) 
+	  $("#output").html(count) 
+	} else {
+		alert('Поставьте восклицательный знак в конец строки!')
+	}
 } 
 </script> 
 </body> 

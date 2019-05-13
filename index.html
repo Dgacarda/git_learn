@@ -14,21 +14,42 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
 <script> 
-const stringsearch = ["а", "о", "и", "е", "ё", "э", "ы", "у", "ю", "я"] 
+// Массив гласных букв
+const letters = ["а", "о", "и", "е", "ё", "э", "ы", "у", "ю", "я"]
+ 
 $("#searchButton").on("click", searching) 
+
+// Перебор введенного текста пользователем
 function searching() { 
 	let count = 0 
-	const string = $("#input").val().split("") 
+	const string = findValue()
+	
 	if (string[string.length - 1] === '!') {
 	  string.forEach(item => { 
-		  if (stringsearch.includes(item.toLowerCase())) { 
+		  if (letters.includes(item.toLowerCase())) { 
 			  count++ 
 		  } 
 	  }) 
-	  $("#output").html(count) 
+	  
+	  fillSpan(count)
 	} else {
-		alert('Поставьте восклицательный знак в конец строки!')
+		showAlert()
 	}
+}
+
+// Заполнение поля количеством найденных гласных
+function fillSpan(count) {
+	$("#output").html(count)
+}
+
+// Текст, введенное пользователем
+function findValue() {
+	return $("#input").val().split("") 
+}
+
+// Отображение ошибки
+function showAlert() {
+	alert('Поставьте восклицательный знак в конец строки!')
 } 
 </script> 
 </body> 

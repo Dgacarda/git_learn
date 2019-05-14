@@ -16,14 +16,12 @@ window.onload = function () {
 		// Количество гласных
 		const count = searching(val)
 		
-		if (count) {
+		if (count > -1) {
 			errorDiv.innerHTML = ''
 			success(count, output)
 		} else {
 			failure(errorDiv)
 		}
-		
-		
 	}
 	
 	// Заполнение поля количеством найденных гласных
@@ -42,7 +40,6 @@ window.onload = function () {
 		let count = 0
 		array = string.split('')
 		
-		
 		if (array[array.length - 1] === '!') { // Проверка на обязательный символ '!' в конце строки
 			
 			array.forEach(item => { // Перебор всех букв в введенной строке
@@ -55,7 +52,7 @@ window.onload = function () {
 		  
 			return count
 		} else {
-			return false
+			return -1
 		}
 	}
 }

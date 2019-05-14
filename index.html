@@ -1,56 +1,21 @@
 ﻿<!DOCTYPE html> 
 <html lang="en"> 
-<head> 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<meta http-equiv="X-UA-Compatible" content="ie=edge"> 
-<title>SearchCountOfVowel</title> 
-</head> 
+	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+		<title>SearchCountOfVowel</title> 
+	</head> 
 <body> 
-<input id="input" placeholder="Введите текст" type="text"> 
-<button id="searchButton">Поиск</button> 
-<div> 
-<h3>Количество гласных: <span id="output"></span></h3> 
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
-<script> 
-// Массив гласных букв
-const letters = ["а", "о", "и", "е", "ё", "э", "ы", "у", "ю", "я"]
- 
-$("#searchButton").on("click", searching) 
 
-// Перебор введенного текста пользователем
-function searching() { 
-	let count = 0 
-	const string = findValue()
+	<input id="input" placeholder="Введите текст" type="text">
 	
-	if (string[string.length - 1] === '!') {
-	  string.forEach(item => { 
-		  if (letters.includes(item.toLowerCase())) { 
-			  count++ 
-		  } 
-	  }) 
-	  
-	  fillSpan(count)
-	} else {
-		showAlert()
-	}
-}
-
-// Заполнение поля количеством найденных гласных
-function fillSpan(count) {
-	$("#output").html(count)
-}
-
-// Текст, введенное пользователем
-function findValue() {
-	return $("#input").val().split("") 
-}
-
-// Отображение ошибки
-function showAlert() {
-	alert('Поставьте восклицательный знак в конец строки!')
-} 
-</script> 
+	<button id="searchButton">Поиск</button>
+	
+	<div> 
+		<h3>Количество гласных: <span id="output"></span></h3> 
+	</div>
+	
+<script src="main.js"></script>
 </body> 
 </html>

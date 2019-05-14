@@ -16,7 +16,7 @@ window.onload = function () {
 		// Количество гласных
 		const count = searching(val)
 		
-		if (count > -1) {
+		if (count >= 0) {
 			errorDiv.innerHTML = ''
 			success(count, output)
 		} else {
